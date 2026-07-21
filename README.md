@@ -1,0 +1,1 @@
+Waste Bin Status Detection using a Convolutional Neural Network (CNN) is an intelligent waste management system that automatically identifies the fill level of garbage bins from images or video streams. The system uses deep learning techniques to classify bins into categories such as empty, normal , and full.
