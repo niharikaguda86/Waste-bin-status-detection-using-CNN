@@ -1,0 +1,7 @@
+Waste Collection and Transportation Supervision Based on Improved YOLOv3 Model
+
+Model: CNN model
+
+Accuracy % score: 99.91
+
+

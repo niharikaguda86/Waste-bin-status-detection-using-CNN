@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>result</title>
+<!--
+
+Template 2089 Meteor
+
+http://www.tooplate.com/view/2089-meteor
+
+-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../static/css/fontAwesome.css">
+        <link rel="stylesheet" href="../static/css/hero-sliders.css">
+        <link rel="stylesheet" href="../static/css/tooplate-style.css">
+
+        
+
+        <script src="../static/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                          <li><a href="{{ url_for('first')}}" class="scroll-top">Home</a></li>
+                        <li><a href="{{ url_for('login')}}" class="scroll-link">Login</a></li>
+						<li><a href="{{ url_for('index')}}" class="scroll-link">Preview</a></li>
+							<li><a href="{{ url_for('performance')}}" class="scroll-link">performance_analysis</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+
+
+    <section class="cd-hero">
+        <ul class="cd-hero-slider autoplay">  
+        <!-- 
+            <ul class="cd-hero-slider autoplay"> for slider auto play 
+            <ul class="cd-hero-slider"> for disabled auto play
+        -->
+            <li class="selected first-slide">
+                <div class="cd-full-width">
+                    <div class="tm-slide-content-div slide-caption">
+                        
+                        <h2>Result</h2>
+                         
+
+						 
+                    </div>                   
+                </div> <!-- .cd-full-width -->
+            </li>
+
+            <li class="second-slide">
+                <div class="cd-full-width">
+                    <div class="tm-slide-content-div slide-caption">
+                        <span>We Are Perfect Staffs</span>
+                        <h2>Our Team Members</h2>
+                        <p>Donec dolor ipsum, laoreet nec metus non, tempus elementum massa. Donec non elit rhoncus, vestibulum enim sed, rutrum arcu.</p>
+                        <div class="primary-button">
+                            <a href="#">Read More</a>
+                        </div>                        
+                    </div>                     
+                </div> <!-- .cd-full-width -->
+            </li>
+
+            <li class="third-slide">
+                <div class="cd-full-width">
+                    <div class="tm-slide-content-div slide-caption">
+                        <span>Design is a hobby</span>
+                        <h2>Responsive Layout</h2>
+                        <p>Integer ut dolor eget magna congue gravida ut at arcu. Vivamus maximus neque quis luctus tempus. Vestibulum consequat.</p>
+                        <div class="primary-button">
+                            <a href="#">View Details</a>
+                        </div>                           
+                    </div>                         
+                </div> <!-- .cd-full-width -->
+            </li>
+        </ul> <!-- .cd-hero-slider -->
+
+        <div class="cd-slider-nav">
+            <nav>
+                <span class="cd-marker item-1"></span>
+                
+                <ul>
+                    <li class="selected"><a href="#0"></a></li>
+                    <li><a href="#0"></a></li>
+                    <li><a href="#0"></a></li>                        
+                </ul>
+            </nav> 
+        </div> <!-- .cd-slider-nav -->
+    </section> <!-- .cd-hero -->
+
+    <div id="about" class="page-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                         
+                       
+                     
+           <div class="col-md-30 col-lg-70" style="margin-left:10px">               
+<div class="heading-section ftco-animate mb-5">
+		            <center> <h2 class="mb-4"></h2></center>
+		            <center><li><a style="size:100%; color:blue; border-style: groove; border-radius: 0px;" href="{{ url_for('index')}}" class="scroll-link">Upload Again</a></li></center>
+		           <center> <h2 class="mb-4">Waste Classification Detection Result</h2></center>
+				   
+				   <body>
+  
+   
+    <div class="container-fluid row">
+      <div class="navbar-header col-md-1 col-sm-1">
+          
+      </div>
+      
+    </div>
+  
+<center>
+   <div class="content">
+        <div class="container-fluid" style="margin-left:10px" style="background-image: url(images/background1.jpg); background-size: fill;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-{{danger}}">
+               
+                </div>
+                <div class="card-body">
+                  <div id='style' class="container-fluid content">
+
+       <div id="output" class="container"style="margin-left:-50px">
+        {% if out_pred and out_prob and processed_file %}
+                      
+        <ol class="list-unstyled row stylized">
+                    
+                    <li class="col-md-12 col-sm-6">
+                     
+                        <br> 
+                       <img src="data:image/png;base64,{{processed_file}}">
+					   <br><br><br>
+                       <h3>Prediction: {{out_pred}}</h3>
+                       <h3>Confidence: {{out_prob}} %</h3>
+                        <br>
+                    </li>
+                                      
+             </ol>
+          <br><br>
+        </div>  
+        
+		
+        {% endif %}
+    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+     
+   
+
+</body>	
+      
+       </center>
+                </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                  
+            </div>
+        </div>
+    </div>
+
+     
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright-text">
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-icons">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+
+    <script src="../static/js/vendor/bootstrap.min.js"></script>
+
+    <script src="../static/js/plugins.js"></script>
+    <script src="../static/js/main.js"></script>
+
+    
+    
+</body>
+</html>
